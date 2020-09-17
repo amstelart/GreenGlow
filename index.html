@@ -49,6 +49,29 @@
       <header class="page-header" role="banner">
         <div class="container">
           <div class="page-header__desktop">
+            <button id="main-nav-toggler" class="main-nav__toggler">
+              <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                <path d="M46 28C46 37.9411 37.9411 46 28 46C18.0589 46 10 37.9411 10 28C10 18.0589 18.0589 10 28 10C37.9411 10 46 18.0589 46 28Z" fill="url(#paint0_linear)"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 22.9999C19 22.4476 19.4477 21.9999 20 21.9999H37C37.5523 21.9999 38 22.4476 38 22.9999C38 23.5522 37.5523 23.9999 37 23.9999H20C19.4477 23.9999 19 23.5522 19 22.9999ZM19 28.5552C19 28.0029 19.4477 27.5552 20 27.5552H28C28.5523 27.5552 29 28.0029 29 28.5552C29 29.1074 28.5523 29.5552 28 29.5552H20C19.4477 29.5552 19 29.1074 19 28.5552ZM20 33.1103C19.4477 33.1103 19 33.558 19 34.1103C19 34.6626 19.4477 35.1103 20 35.1103H32C32.5523 35.1103 33 34.6626 33 34.1103C33 33.558 32.5523 33.1103 32 33.1103H20Z" fill="white"/>
+                </g>
+                <defs>
+                <filter id="filter0_d" x="0" y="0" width="56" height="56" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feflood flood-opacity="0" result="BackgroundImageFix"/>
+                <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                <feoffset/>
+                <fegaussianblur stddeviation="5"/>
+                <fecolormatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
+                <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+                <lineargradient id="paint0_linear" x1="46" y1="12.9451" x2="7.13163" y2="16.0603" gradientunits="userSpaceOnUse">
+                <stop stop-color="#08CB56"/>
+                <stop offset="1" stop-color="#1FE16D"/>
+                </lineargradient>
+                </defs>
+                </svg>
+            </button>
             <a href="index.html" class="logo">
               <img src="img/logo.svg" alt="logo">
             </a>
@@ -72,6 +95,9 @@
                 <a href="#">Заказать звонок</a>
               </div>
             </div>
+            <button id="basket-toggler" class="page-header__basket-toggler">
+              <svg class="icon" width="26" height="26"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-basket"/></svg>
+            </button>
           </div>
         </div>
       </header>
