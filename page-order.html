@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="no-js page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body class>
+  <div class="page__inner">
+    <div class="page__content">
+      <main class="order" role="main">
+        <div class="container">
+          <div class="order__head">
+            <a class="order__out" href="index.html">Вернуться назад</a>
+            <h1 class="order__title">Оформление заказа</h1>
+            <div class="order__title-decor"></div>
+          </div>
+          <div class="order__row">
+            <div class="order__main">
+              <div class="order__box">
+                <h4 class="order__box-title">Способ доставки</h4>
+                <form action class="delivery">
+                  <div class="delivery__row">
+                    <div class="delivery__item">
+                      <div class="field-radio">
+                        <label class="field-radio__delivery">
+                          <input class="field-radio__input" type="radio" id name="delivery-radio" checked>
+                          <div class="field-radio__delivery-body">
+                            <div class="delivery-inner">
+                              <div class="delivery-name">Почта России</div>
+                              <div class="delivery-logo"><img src="img/russian_post.png" alt></div>
+                              <div class="delivery-text">
+                                <span>От 200 рублей</span>
+                                <span>3-5 дней</span>
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="delivery__item">
+                      <div class="field-radio">
+                        <label class="field-radio__delivery">
+                          <input class="field-radio__input" type="radio" id name="delivery-radio">
+                          <div class="field-radio__delivery-body">
+                            <div class="delivery-inner">
+                              <div class="delivery-name">DHL</div>
+                              <div class="delivery-logo"><img src="img/DHL.png" alt></div>
+                              <div class="delivery-text">
+                                <span>От 700 рублей</span>
+                                <span>1-2 дня</span>
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="delivery__item">
+                      <div class="field-radio">
+                        <label class="field-radio__delivery">
+                          <input class="field-radio__input" type="radio" id name="delivery-radio">
+                          <div class="field-radio__delivery-body">
+                            <div class="delivery-inner">
+                              <div class="delivery-name">СДЕК</div>
+                              <div class="delivery-logo"><img src="img/CDEK.png" alt></div>
+                              <div class="delivery-text">
+                                <span>От 550 рублей</span>
+                                <span>1-3 дня</span>
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="delivery__item">
+                      <div class="field-radio">
+                        <label class="field-radio__delivery">
+                          <input class="field-radio__input" type="radio" id name="delivery-radio">
+                          <div class="field-radio__delivery-body">
+                            <div class="delivery-inner">
+                              <div class="delivery-name">Pony Express</div>
+                              <div class="delivery-logo"><img src="img/pony_express.png" alt></div>
+                              <div class="delivery-text">
+                                <span>От 350 рублей</span>
+                                <span>2-4 дня</span>
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="order__box">
+                <h4 class="order__box-title">Мои данные</h4>
+                <form action class="user-contact">
+                  <div class="field-2row">
+                    <div class="field-col">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Имя" id name>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="field-col">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Фамилия" id name>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="field-2row">
+                    <div class="field-col">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Индекс" id name>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="field-col">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Город" id name>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Улица, номер дома, квартира" id name>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Электронная почта" id name>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Номер телефона" id name>
+                    </span>
+                  </label>
+                </form>
+              </div>
+              <div class="order__box">
+                <h4 class="order__box-title">Способ оплаты</h4>
+                <form action class="payment">
+                  <div class="payment__row">
+                    <div class="payment__item">
+                      <div class="field-radio">
+                        <label class="field-radio__payment">
+                          <input class="field-radio__input" type="radio" id name="payment-radio" checked>
+                          <div class="field-radio__payment-body">
+                            <div class="payment-logo">
+                              <img src="img/logo-visa.svg" alt>
+                              <img src="img/logo-mastercard.svg" alt>
+                              <img src="img/logo-mir.svg" alt>
+                            </div>
+                            <div class="payment-name">Банковской картой</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="payment__item">
+                      <div class="field-radio">
+                        <label class="field-radio__payment">
+                          <input class="field-radio__input" type="radio" id name="payment-radio">
+                          <div class="field-radio__payment-body">
+                            <div class="payment-logo">
+                              <img src="img/logo-qiwi.svg" alt>
+                              <img src="img/logo-yad.svg" alt>
+                              <img src="img/logo-wm.svg" alt>
+                            </div>
+                            <div class="payment-name">Другие способы оплаты</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="order__basket">
+              <div class="order__box">
+                <h4 class="order__box-title">Выбранные товары</h4>
+                <div class="basket">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
