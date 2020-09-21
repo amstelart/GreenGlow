@@ -11,7 +11,7 @@ $screen-lg:                   992px !default;
 $screen-xl:                   1200px !default;
 $screen-xxl:                  1800px !default;
 
-$menu-desktop-width:          $screen-xl !default;
+$menu-desktop-width:          $screen-md;
 $toggler-part-height:         3px !default;
 $toggler-part-bg-color:       #000 !default;
 
@@ -28,6 +28,7 @@ $transition-time:             0.3s !default;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  display: none;
 
   // настольный вид списка
   @media (min-width: $menu-desktop-width) {
@@ -49,16 +50,39 @@ $transition-time:             0.3s !default;
   &__link {
     display: block;
     padding: 0.5em;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     background-color: #fff;
     color: rgba(#413737, 0.5);
 
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+    }
+
     &:hover,
     &:focus {
       text-decoration: none;
       color: #413737;
+    }
+  }
+
+  &__toggler {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+
+    svg {
+      display: block;
+    }
+
+    &:focus {
+      outline: none;
+    }
+    @media (min-width: $screen-md) {
+      display: none;
     }
   }
 }

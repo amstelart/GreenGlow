@@ -12,6 +12,10 @@
   position: relative;
   z-index: 2;
 
+  @media (max-width: ($screen-md - 1)) {
+    padding: 0;
+  }
+
   .logo {
     height: 38px;
     width: 109px;
@@ -21,6 +25,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: ($screen-md - 1)) {
+      .logo {
+
+      }
+    }
 
     .call-box {
       margin-bottom: 0;
@@ -44,9 +54,39 @@
       }
     }
   }
+
+  &__basket-toggler {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 56px;
+    height: 56px;
+    position: relative;
+    cursor: pointer;
+  
+    svg {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
 }
 
 .desktop-basket {
+  @media (max-width: ($screen-md - 1)) {
+    display: none;
+  }
   &__inner {
     text-decoration: none;
     color: #0FC057;
@@ -67,4 +107,5 @@
     white-space: nowrap;
   }
 }
+
 

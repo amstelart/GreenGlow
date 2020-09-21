@@ -36,26 +36,6 @@ $line-height:                 1.375em !default;
 
   &__name-text {
 
-    // своя радиокнопка с картинкой
-
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0.1em;
-    //   left: 0;
-    //   width: 14px;
-    //   height: 14px;
-    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton.svg');
-    //   background-size: 100%;
-    // }
-    // @at-root input:checked ~ &:before {
-    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton--checked.svg');
-    // }
-
-    // / своя радиокнопка с картинкой
-
-    // своя радиокнопка без картинки
-
     &:before {
       content: '';
       position: absolute;
@@ -114,5 +94,246 @@ $line-height:                 1.375em !default;
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &--diameter {
+    display: flex;
+    #{$block-name}__input-wrap {
+      margin: 0 15px 0 0;
+    }
+    #{$block-name}__name {
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+    #{$block-name}__name-text {
+      border: 2px solid #1ADC68;
+      color: #1ADC68;
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 50px;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      @at-root input:checked ~ .field-radio__name-text.diameter {
+        color: #fff;
+        background: #1ADC68;
+      }
+    }
+  }
+
+  &--quantity {
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.02);
+    border-radius: 6px;
+
+    #{$block-name}__input-wrap {
+      margin: 0;
+    }
+    #{$block-name}__name {
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+    #{$block-name}__name-text {
+      border: 2px solid #fff;
+      color: #675F5F;
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 80px;
+      height: 50px;
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 50px;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      @at-root input:checked ~ .field-radio__name-text.quantity {
+        color: #fff;
+        background: #1ADC68;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__payment {
+    position: relative;
+    display: inline-block;
+    padding-left: 1.5em;
+    margin-right: 0.6em;
+    font-weight: 400;
+    line-height: $line-height;
+    cursor: pointer;
+  }
+  &__payment-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width: $screen-xl) {
+      flex-direction: row;
+    }
+    
+    .payment-logo {
+      order: 2;
+      height: 100px;
+      min-width: 310px;
+      background: #FFFFFF;
+      border: 1px solid #F0F0F0;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.02);
+      border-radius: 4px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      @media (min-width: $screen-xl) {
+        order: 1;
+      }
+      img {
+        padding: 0 10px;
+      }
+    }
+    .payment-name {
+      order: 1;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: #282525;
+      padding: 20px;
+      @media (min-width: $screen-xl) {
+        order: 2;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.1em;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+    }
+
+    @at-root input:focus ~ &:before {
+      @include field-focus;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(0.1em + 4px);
+      left: 4px;
+      width: 6px;
+      height: 6px;
+      opacity: 0;
+      border-radius: 50%;
+      background-color: currentColor;
+      transition: opacity $transition-time;
+
+      @at-root input:checked ~ & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__delivery {
+    position: relative;
+    display: inline-block;
+    padding-left: 1.5em;
+    margin-right: 0.6em;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  &__delivery-body {
+    // display: flex;
+    // align-items: center;
+    .delivery-inner {
+      position: relative;
+      min-height: 100px;
+      padding-left: 120px;
+      padding-top: 15px;
+    }
+    .delivery-name {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: #282525;
+    }
+    .delivery-logo {
+      background: #fff;
+      border: 1px solid #F0F0F0;
+      box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.02);
+      border-radius: 4px;
+      width: 100px;
+      height: 100px;
+      padding: 16px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+    .delivery-text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: #282525;
+      span {
+        display: block;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.1em;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+    }
+
+    @at-root input:focus ~ &:before {
+      @include field-focus;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(0.1em + 4px);
+      left: 4px;
+      width: 6px;
+      height: 6px;
+      opacity: 0;
+      border-radius: 50%;
+      background-color: currentColor;
+      transition: opacity $transition-time;
+
+      @at-root input:checked ~ & {
+        opacity: 1;
+      }
+    }
   }
 }

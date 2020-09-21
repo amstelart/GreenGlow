@@ -66,7 +66,10 @@
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
     "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
-    "../../node_modules/nouislider/distribute/nouislider.css"
+    "../../node_modules/slick-carousel/slick/slick.scss",
+    "../../node_modules/slick-carousel/slick/slick-theme.scss",
+    "../../node_modules/nouislider/distribute/nouislider.css",
+    "../../node_modules/jquery-nice-select/css/nice-select.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
@@ -82,7 +85,9 @@
     "./node_modules/owl.carousel/dist/owl.carousel.js",
     "./node_modules/swipejs/build/swipe.min.js",
     "./node_modules/nouislider/distribute/nouislider.js",
-    "./node_modules/object-fit-images/dist/ofi.js"
+    "./node_modules/object-fit-images/dist/ofi.js",
+    "./node_modules/slick-carousel/slick/slick.min.js",
+    "./node_modules/jquery-nice-select/js/jquery.nice-select.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

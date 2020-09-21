@@ -48,6 +48,7 @@ $border-radius:               3px !default;
     text-decoration: none;
     color: $text-color;
     background-color: darken($gray-lightest, 10%);
+    outline: none;
   }
 
   &:active {

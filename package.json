@@ -55,6 +55,7 @@
     "gulp.spritesmith": "^6.3.0",
     "husky": "^0.14.3",
     "imagemin-pngquant": "^5.0.0",
+    "jquery-nice-select": "^1.1.0",
     "lint-staged": "^5.0.0",
     "merge-stream": "^1.0.1",
     "mkdirp": "^0.5.1",
@@ -62,6 +63,7 @@
     "postcss-import": "^11.0.0",
     "postcss-inline-svg": "^3.0.0",
     "postcss-object-fit-images": "^1.1.2",
+    "slick-carousel": "^1.8.1",
     "stylelint": "^8.2.0",
     "vinyl-buffer": "^1.0.0",
     "yaspeller": "^4.0.0"

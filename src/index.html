@@ -19,7 +19,8 @@
       <main role="main">
 
         <section class="l-intro">
-          <div class="container" style="background-image: url(img/l-intro-img.png);">
+          <img class="l-intro__mobile-img" src="img/intro-img-mobile.png" alt="">
+          <div class="container">
             <div class="l-intro__content">
               <div class="intro-box">
                 <h5 class="intro-box__sub-title">Съедобные трубочки</h5>
@@ -98,6 +99,151 @@
               <h2 class="main-heading__text">Заказать трубочки</h2>
               <div class="main-heading__decor"></div>
             </div>
+            <div class="s-order">
+              <div class="s-order__nav">
+                <div class="s-order__nav-item">
+                  <a href="#">
+                    <div class="nav-item-img" style="background-image: url(img/nav-strawberry-img.png);"></div>
+                    <span>Клубника</span>
+                  </a>
+                </div>
+                <div class="s-order__nav-item">
+                  <a href="#">
+                    <div class="nav-item-img" style="background-image: url(img/nav-vanilla-img.png);"></div>
+                    <span>Ваниль</span></a>
+                </div>
+                <div class="s-order__nav-item">
+                  <a href="#">
+                    <div class="nav-item-img" style="background-image: url(img/nav-caramel-img.png);"></div>
+                    <span>Карамель</span></a>
+                </div>
+                <div class="s-order__nav-item">
+                  <a href="#">
+                    <div class="nav-item-img" style="background-image: url(img/nav-mint-img.png);"></div>
+                    <span>Мята</span></a>
+                </div>
+                <div class="s-order__nav-item">
+                  <a href="#">
+                    <div class="nav-item-img" style="background-image: url(img/nav-chocolate-img.png);"></div>
+                    <span>Шоколад</span></a>
+                </div>
+              </div>
+              <div class="s-order__row">
+                <div class="s-order__view">
+                  <img src="img/s-order-view.png" alt="">
+                </div>
+                <!-- <h5 class="s-order__title">Выберите вкус:</h5>
+                <div class="nice-select-wrap">
+                  <select class="wide" id="" name="">
+                    <option>Клубника</option>
+                    <option>Ваниль</option>
+                    <option>Карамель</option>
+                    <option>Мята</option>
+                    <option>Шоколад</option>
+                  </select>
+                </div> -->
+                <div class="s-order__body">
+                  <div id="caption-carousel" class="s-order__caption">
+                    <div class="item">
+                      <h5 class="s-order__title">Описание:</h5>
+                      <p>Клубничные трубочки длинной в 22 см с насыщенным вкусом. Окунись в волшебное вкусовое путешествие благодаря нашим трубочкам</p>
+                    </div>
+                    <div class="item">
+                      <h5 class="s-order__title">Состав:</h5>
+                      <p>Крахмал, вода, яблочное пюре, сухофрукты, клубничный концентрат, ароматизатор идентичный натуральному</p>
+                    </div>
+                  </div>
+                  <div class="s-order__fields-desktop">
+                    <div class="field-item">
+                      <h5 class="s-order__title">Внешний диаметр:</h5>
+                      <div class="field-radio field-radio--diameter">
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="diameter-radio" checked>
+                            <span class="field-radio__name-text diameter">6</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="diameter-radio">
+                            <span class="field-radio__name-text diameter">8</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="diameter-radio">
+                            <span class="field-radio__name-text diameter">10</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field-item">
+                      <h5 class="s-order__title">Количество трубочек:</h5>
+                      <div class="field-radio field-radio--quantity">
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="quantity-radio" checked>
+                            <span class="field-radio__name-text quantity">50</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="quantity-radio">
+                            <span class="field-radio__name-text quantity">100</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="quantity-radio">
+                            <span class="field-radio__name-text quantity">150</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="quantity-radio">
+                            <span class="field-radio__name-text quantity">200</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="quantity-radio">
+                            <span class="field-radio__name-text quantity">250</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-order__fields-mobile">
+                    <div class="field-item">
+                      <h5 class="s-order__title">Внешний диаметр:</h5>
+                      <div class="nice-select-wrap">
+                        <select class="wide" id="" name="">
+                          <option>6 мм</option>
+                          <option>8 мм</option>
+                          <option>10 мм</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="field-item">
+                      <h5 class="s-order__title">Количество трубочек:</h5>
+                      <div class="nice-select-wrap">
+                        <select class="wide" id="" name="">
+                          <option>50</option>
+                          <option>100</option>
+                          <option>150</option>
+                          <option>200</option>
+                          <option>250</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-order__action">
+                    <div class="s-order__price">Итого: <span>490₽</span></div>
+                    <button class="btn btn--green">В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="wave">
             <img src="img/wave-white-03.svg" alt="">
@@ -151,7 +297,7 @@
               <div class="main-heading__decor"></div>
             </div>
             <div class="team">
-              <div class="team__list">
+              <div id="team-carousel" class="team__list">
                 <div class="team__item">
                   <div class="team-card">
                     <div class="team-card__img-wrap">
