@@ -59,7 +59,8 @@
     "pie-chart": [],
     "fields-group": [],
     "tooltip": [],
-    "social": []
+    "social": [],
+    "field-num": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -69,7 +70,8 @@
     "../../node_modules/slick-carousel/slick/slick.scss",
     "../../node_modules/slick-carousel/slick/slick-theme.scss",
     "../../node_modules/nouislider/distribute/nouislider.css",
-    "../../node_modules/jquery-nice-select/css/nice-select.css"
+    "../../node_modules/jquery-nice-select/css/nice-select.css",
+    "../../node_modules/hc-offcanvas-nav/dist/hc-offcanvas-nav.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
@@ -87,7 +89,10 @@
     "./node_modules/nouislider/distribute/nouislider.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/slick-carousel/slick/slick.min.js",
-    "./node_modules/jquery-nice-select/js/jquery.nice-select.min.js"
+    "./node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
+    "./node_modules/hc-offcanvas-nav/dist/hc-offcanvas-nav.js",
+    "./node_modules/wow.js/dist/wow.min.js",
+    "./node_modules/simple-parallax-js/dist/simpleParallax.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

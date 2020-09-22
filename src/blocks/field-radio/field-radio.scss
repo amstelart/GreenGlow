@@ -146,7 +146,7 @@ $line-height:                 1.375em !default;
       cursor: pointer;
     }
     #{$block-name}__name-text {
-      border: 2px solid #fff;
+      border: none;
       color: #675F5F;
       text-align: center;
       box-sizing: border-box;
@@ -173,19 +173,29 @@ $line-height:                 1.375em !default;
 
   &__payment {
     position: relative;
-    display: inline-block;
+    display: block;
     padding-left: 1.5em;
-    margin-right: 0.6em;
     font-weight: 400;
     line-height: $line-height;
     cursor: pointer;
+
+    @media (max-width: ($screen-lg - 1)) {
+      padding-left: 0;
+    }
   }
   &__payment-body {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     flex-direction: column;
     @media (min-width: $screen-xl) {
+      align-items: center;
       flex-direction: row;
+    }
+
+    @at-root input:checked ~ & .payment-logo {
+      @media (max-width: ($screen-lg - 1)) {
+        border-color: #1ADC68;
+      }
     }
     
     .payment-logo {
@@ -206,6 +216,23 @@ $line-height:                 1.375em !default;
       img {
         padding: 0 10px;
       }
+      @media (max-width: ($screen-lg - 1)) {
+        background: transparent;
+        box-shadow: none;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          background: #FFFFFF;
+          border: 1px solid #F0F0F0;
+          box-sizing: border-box;
+          box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.02);
+          border-radius: 4px;
+          padding: 8px 15px;
+          width: 88px;
+          height: 46px;
+        }
+      }
     }
     .payment-name {
       order: 1;
@@ -218,57 +245,85 @@ $line-height:                 1.375em !default;
       @media (min-width: $screen-xl) {
         order: 2;
       }
+
+      @media (max-width: ($screen-lg - 1)) {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 4px;
+      }
     }
 
     &:before {
       content: '';
       position: absolute;
-      top: 0.1em;
+      bottom: 40px;
       left: 0;
-      width: 14px;
-      height: 14px;
-      border: 2px solid currentColor;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #767474;
       border-radius: 50%;
-    }
 
-    @at-root input:focus ~ &:before {
-      @include field-focus;
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
     }
 
     &:after {
       content: '';
       position: absolute;
-      top: calc(0.1em + 4px);
+      bottom: 44px;
       left: 4px;
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       opacity: 0;
       border-radius: 50%;
-      background-color: currentColor;
+      background-color: #767474;
       transition: opacity $transition-time;
 
       @at-root input:checked ~ & {
         opacity: 1;
+      }
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
       }
     }
   }
 
   &__delivery {
     position: relative;
-    display: inline-block;
+    display: block;
     padding-left: 1.5em;
-    margin-right: 0.6em;
+    // margin-right: 0.6em;
     font-weight: 400;
     cursor: pointer;
+
+    @media (max-width: ($screen-lg - 1)) {
+      padding-left: 0;
+    }
   }
   &__delivery-body {
     // display: flex;
     // align-items: center;
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    @media (max-width: ($screen-lg - 1)) {
+      padding: 10px;
+    }
+
     .delivery-inner {
       position: relative;
       min-height: 100px;
-      padding-left: 120px;
       padding-top: 15px;
+      text-align: center;
+      
+      @media (min-width: $screen-lg) {
+        padding-left: 120px;
+        text-align: left;
+      }
     }
     .delivery-name {
       font-weight: bold;
@@ -282,15 +337,22 @@ $line-height:                 1.375em !default;
       border: 1px solid #F0F0F0;
       box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.02);
       border-radius: 4px;
-      width: 100px;
-      height: 100px;
+      display: inline-block;
+      // width: 100px;
+      // height: 100px;
       padding: 16px;
-      position: absolute;
-      top: 0;
-      left: 0;
       img {
         display: block;
         margin: auto;
+      }
+
+      @media (min-width: $screen-lg) {
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;  
       }
     }
     .delivery-text {
@@ -307,29 +369,39 @@ $line-height:                 1.375em !default;
     &:before {
       content: '';
       position: absolute;
-      top: 0.1em;
+      top: calc(50% - 8px);
       left: 0;
-      width: 14px;
-      height: 14px;
-      border: 2px solid currentColor;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #767474;
       border-radius: 50%;
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
     }
 
-    @at-root input:focus ~ &:before {
-      @include field-focus;
+    @at-root input:checked ~ & {
+      @media (max-width: ($screen-lg - 1)) {
+        border-color: #1ADC68;
+      }
     }
 
     &:after {
       content: '';
       position: absolute;
-      top: calc(0.1em + 4px);
+      top: calc(50% - 4px);
       left: 4px;
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       opacity: 0;
       border-radius: 50%;
-      background-color: currentColor;
+      background-color: #767474;
       transition: opacity $transition-time;
+
+      @media (max-width: ($screen-lg - 1)) {
+        display: none;
+      }
 
       @at-root input:checked ~ & {
         opacity: 1;

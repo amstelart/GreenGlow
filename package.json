@@ -53,6 +53,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-wait": "0.0.2",
     "gulp.spritesmith": "^6.3.0",
+    "hc-offcanvas-nav": "^5.0.12",
     "husky": "^0.14.3",
     "imagemin-pngquant": "^5.0.0",
     "jquery-nice-select": "^1.1.0",
@@ -63,9 +64,11 @@
     "postcss-import": "^11.0.0",
     "postcss-inline-svg": "^3.0.0",
     "postcss-object-fit-images": "^1.1.2",
+    "simple-parallax-js": "^5.6.2",
     "slick-carousel": "^1.8.1",
     "stylelint": "^8.2.0",
     "vinyl-buffer": "^1.0.0",
+    "wow.js": "^1.2.2",
     "yaspeller": "^4.0.0"
   },
   "dependencies": {

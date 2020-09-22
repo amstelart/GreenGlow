@@ -1,0 +1,117 @@
+// В этом файле должны быть стили для БЭМ-блока field-num, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$text-color-muted: #ccc;
+
+.field-num {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  // margin-bottom: $typo-margin-vertical;
+
+  &__name {
+    // @include field-name;
+  }
+
+  &__input-wrap {
+    display: block;
+  }
+
+  &__input-and-btns {
+    display: block;
+    position: relative;
+    width: 82px;
+    @media (max-width: ($screen-sm - 1)) {
+      width: 82px;
+    }
+  }
+
+  &__input {
+    @include field-text;
+    padding: 0.3em 20px;
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #413737;
+
+    // #{$block-name}:not(#{$block-name}--disabled) button:focus ~ & { // stylelint-disable-line
+    //   @include field-focus;
+    // }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 5px;
+    bottom: 1px;
+    width: 17px;
+    height: 17px;
+    border: none;
+    border-radius: 50%;
+    font: 0/0 a; // stylelint-disable-line
+    color: transparent;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#08CB56, 6%);
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--plus {
+      right: 1px;
+      background: svg-load('../blocks/field-num/bg-img/plus.svg') center no-repeat;
+      background-color: #08CB56;
+      background-size: 7px 7px;
+    }
+
+    &--minus {
+      left: 1px;
+      background: svg-load('../blocks/field-num/bg-img/minus.svg') center no-repeat;
+      background-color: #08CB56;
+      background-size: 7px 7px;
+    }
+
+    #{$block-name}--disabled & {
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__help-text {
+    // @include field-help-text;
+  }
+
+
+
+  &--error {
+
+    #{$block-name}__name,
+    #{$block-name}__input,
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+
+    #{$block-name}__input {
+      border-color: $color-danger;
+      background-color: lighten($color-danger, 35%);
+    }
+  }
+}
