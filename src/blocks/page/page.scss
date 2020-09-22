@@ -658,6 +658,7 @@ img {
     @include col();
     @include col(lg, 2);
     @include col(sm, 4);
+    @include col(xs, 6);
 
     img {
       filter: grayscale(100%);
