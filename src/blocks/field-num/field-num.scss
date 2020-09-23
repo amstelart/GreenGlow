@@ -38,6 +38,7 @@ $text-color-muted: #ccc;
     line-height: 20px;
     text-align: center;
     color: #413737;
+    background: transparent;
 
     // #{$block-name}:not(#{$block-name}--disabled) button:focus ~ & { // stylelint-disable-line
     //   @include field-focus;

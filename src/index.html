@@ -19,11 +19,9 @@
       <main role="main">
 
         <section class="l-intro">
-          <div class="s1-leaf">
-            <div class="s1-left-leaf">
-              <!-- <img src="img/s1-left-leaf.png" class="parallax" alt=""> -->
-            </div>
-            <div class="s1-right-leaf"></div>
+          <div class="s-leaf">
+            <div class="s1-left-leaf"  data-parallax="0.3"></div>
+            <div class="s1-right-leaf" data-parallax="0.4"></div>
           </div>
           <img class="l-intro__mobile-img" src="img/intro-img-mobile.png" alt="">
           <div class="container">
@@ -41,7 +39,12 @@
           </div>
         </section>
 
-        <section class="l-section">
+        <section class="l-section l-section--about">
+          <div class="s-leaf">
+            <div class="s2-left-leaf"  data-parallax="0.3"></div>
+            <div class="s2-right-leaf-01" data-parallax="0.5"></div>
+            <div class="s2-right-leaf-02" data-parallax="0.5"></div>
+          </div>
           <div class="container">
             <div class="main-heading">
               <h2 class="main-heading__text">О продукте</h2>
@@ -104,6 +107,10 @@
           <img src="img/wave-white-02.svg" alt="">
         </div>
         <section class="l-section l-section--order bg-gray">
+          <div class="s-leaf">
+            <div class="s3-left-leaf" data-parallax="0.3"></div>
+            <div class="s3-right-leaf" data-parallax="0.3"></div>
+          </div>
           <div class="container">
             <div class="main-heading">
               <h2 class="main-heading__text">Заказать трубочки</h2>
@@ -310,6 +317,10 @@
           </div>
         </section>
         <section class="l-section bg-gray">
+          <div class="s-leaf">
+            <div class="s5-left-leaf" data-parallax="0.2"></div>
+            <div class="s5-right-leaf" data-parallax="0.3"></div>
+          </div>
           <div class="container">
             <div class="main-heading">
               <h2 class="main-heading__text">Наша команда</h2>
@@ -434,6 +445,9 @@
           </div>
         </section>
         <section class="l-section">
+          <div class="s-leaf">
+            <div class="s8-left-leaf" data-parallax="0.2"></div>
+          </div>
           <div class="container">
             <div class="main-heading">
               <h2 class="main-heading__text">Наши партнеры</h2>
@@ -474,6 +488,8 @@
     </div>
 
   </div>
+
+  <div class="zeynep-overlay"></div>
 
   @@include('_include/page_bottom.html')
 </body>

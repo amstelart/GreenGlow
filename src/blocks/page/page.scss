@@ -139,41 +139,115 @@ img {
     display: none;
   }
 }
+
+.s-leaf {
+  position: absolute;
+  width: 100%;
+  min-width: 1600px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.s1-left-leaf {
+  background-repeat: no-repeat;
+  background-image: url(../img/s1-left-leaf.png);
+  background-position: top right;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 330px;
+}
+.s1-right-leaf {
+  background-image: url(../img/s1-right-leaf.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 470px;
+}
+
+.s2-left-leaf {
+  background-repeat: no-repeat;
+  background-image: url(../img/s2-left-leaf.png);
+  background-position: top right;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 220px;
+  height: 220px;
+}
+.s2-right-leaf-01 {
+  background-image: url(../img/s2-right-leaf-01.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20%;
+  right: -2%;
+  width: 220px;
+  height: 220px;
+}
+.s3-left-leaf {
+  background-image: url(../img/s3-left-leaf.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -200px;
+  left: -6%;
+  width: 300px;
+  height: 300px;
+}
+.s3-right-leaf {
+  background-image: url(../img/s3-right-leaf.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -300px;
+  right: -6%;
+  width: 220px;
+  height: 220px;
+}
+.s5-left-leaf {
+  background-image: url(../img/s5-left-leaf.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -55%;
+  left: 40px;
+  width: 100px;
+  height: 100px;
+}
+.s5-right-leaf {
+  background-image: url(../img/s5-right-leaf.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -85%;
+  right: -2%;
+  width: 220px;
+  height: 270px;
+}
+
+.s8-left-leaf {
+  background-image: url(../img/s8-left-leaf.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -245%;
+  left: -65px;
+  width: 300px;
+  height: 300px;
+}
+
 .l-intro {
   background: linear-gradient(259.17deg, #F2FFD6 1.18%, #D5FFD9 97.82%);
   padding-top: 35px;
   position: relative;
-  overflow: hidden;
-
-  .s1-leaf {
-    position: absolute;
-    width: 1920px;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .s1-left-leaf {
-    background-repeat: no-repeat;
-    background-image: url(../img/s1-left-leaf.png);
-    background-position: top right;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 330px;
-  }
-  .s1-right-leaf {
-    background-image: url(../img/s1-right-leaf.png);
-    background-position: top left;
-    background-repeat: no-repeat;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 470px;
-  }
 
   @media (min-width: $screen-md) {
     background: linear-gradient(259.17deg, #FBFFF1 1.18%, #EEFFF0 97.82%);
@@ -253,6 +327,7 @@ img {
 
 .l-section {
   padding: 42px 0;
+  position: relative;
   
   @media (min-width: $screen-lg) {
     padding: 88px 0;
@@ -975,7 +1050,11 @@ img {
   border: 1px solid #DCDCDC;
   box-sizing: border-box;
   border-radius: 6px;
-  padding: 30px 25px;
+  padding: 20px 15px;
+
+  @media (min-width: $screen-md) {
+    padding: 30px 25px;
+  }
 
   &__row {
     @include row;
@@ -1042,6 +1121,9 @@ img {
     font-size: 14px;
     font-weight: 500;
     color: #9D9999;
+  }
+  .field-num {
+    margin-top: 6px;
   }
   &__price {
     span {
