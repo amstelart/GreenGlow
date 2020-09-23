@@ -328,6 +328,11 @@ img {
 .l-section {
   padding: 42px 0;
   position: relative;
+
+  .container {
+    position: relative;
+    z-index: 5;
+  }
   
   @media (min-width: $screen-lg) {
     padding: 88px 0;
@@ -1096,6 +1101,18 @@ img {
     &:not(:last-child) {
       border-bottom: 1px solid #DCDCDC;
     }
+  }
+
+  .b-btn {
+    margin-bottom: 12px;
+  }
+
+  .сancel-link {
+    color: #FFAFAF;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    text-align: center;
   }
 }
 .b-product {
