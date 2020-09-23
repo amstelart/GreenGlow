@@ -46,6 +46,10 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff"></head>
 <body>
+  <div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.5em; font-size: 14px;">
+    <a href="#modal-call" data-toggle="modal">popup-1</a>,
+    <a href="#modal-sent" data-toggle="modal">popup-2</a>,
+  </div>
   <div class="page__inner">
     <div class="page__content">
       <div class="zeynep left" data-menu-name="left">
@@ -250,7 +254,7 @@
               <div class="call-box__phone">+7 495 123 45 67</div>
               <div class="call-box__link">
                 <svg class="icon" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-call"/></svg>
-                <a href="#">Заказать звонок</a>
+                <a href="#modal-call" data-toggle="modal">Заказать звонок</a>
               </div>
             </div>
             <button id="basket-toggler" class="page-header__basket-toggler">
@@ -866,6 +870,54 @@
     </div>
   </div>
   <div class="zeynep-overlay"></div>
+  <div id="modal-call" class="modal modal-call" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <form action class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h4 class="modal__title">Наш менеджер свяжется с вами в течение 10 минут</h4>
+        </div>
+        <div class="modal__body">
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" placeholder="Ваше имя" id name>
+            </span>
+          </label>
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" placeholder="Ваше телефон" id name>
+            </span>
+          </label>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn btn--green" data-dismiss="modal">Заказать звонок</button>
+          <div class="field-checkbox field-checkbox--agreement">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" id name checked>
+              <span class="field-checkbox__name-text">Я принимаю условия <a href="#">пользовательского <br>соглашения</a></span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-sent" class="modal modal-sent" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <!-- <h4 class="modal__title">Наш менеджер свяжется с вами в течение 10 минут</h4> -->
+        </div>
+        <div class="modal__body">
+          <h4>Спасибо, ваша заявка принята!</h4>
+          <p>Наш менеджер свяжется с вами в течение 10 минут</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn btn--green" data-dismiss="modal">Вернуться назад</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/script.min.js"></script>
 </body>
 </html>
