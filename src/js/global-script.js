@@ -10,6 +10,13 @@ $( document ).ready(function() {
     parent.toggleClass("active")
   });
   // dropdown === end
+  $('.desktop-basket__inner').click(function(){
+    $(".section-basket").addClass("opened");
+  });
+  $('.section-basket__close').click(function(){
+    $(".section-basket").removeClass("opened");
+  });
+
   var wow = new WOW(
     {
       boxClass:     'wow',      // animated element css class (default is wow)
