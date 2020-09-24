@@ -307,8 +307,11 @@ $line-height:                 1.375em !default;
   &__delivery-body {
     // display: flex;
     // align-items: center;
-    border: 1px solid transparent;
+    border: 1px solid #DCDCDC;
     border-radius: 6px;
+    @media (min-width: $screen-lg) {
+      border-color: transparent;
+    }
 
     @media (max-width: ($screen-lg - 1)) {
       padding: 10px;

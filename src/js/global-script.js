@@ -57,7 +57,7 @@ $(window).on('load resize', function() {
       $("#caption-carousel.slick-initialized").slick("unslick");
     }
 
-    if ($(window).width() < 768) {
+    if ($(window).width() < 991) {
       $('#post-carousel:not(.slick-initialized)').slick({
         centerMode: false,
         variableWidth: true,
@@ -112,15 +112,21 @@ $(function() {
     })
   });
 
-  // open first zeynepjs side menu
+  // open left zeynepjs side menu
   $('#main-nav-toggler').on('click', function () {
     $('.zeynep.left').data('zeynep').open();
   });
   
-  // open second zeynepjs side menu
+  // open right zeynepjs side menu
   $('#basket-toggler').on('click', function () {
     $('.zeynep.right').data('zeynep').open();
   });
+
+  $('.order-basket-toggler').on('click', function () {
+    $(this).toggleClass('active');
+    $('.zeynep.top').data('zeynep').open();
+  });
+
 });
 
 /**

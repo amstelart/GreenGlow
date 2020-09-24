@@ -127,6 +127,9 @@
   padding-top: 25px;
 
   &__copyright {
+    img {
+      max-width: 120px;
+    }
     p {
       span {
         white-space: nowrap;
@@ -136,6 +139,7 @@
   &__social {
     .social {
       flex-wrap: nowrap;
+      margin-top: 0;
     }
   }
 }

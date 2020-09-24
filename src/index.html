@@ -9,6 +9,10 @@
 </head>
 
 <body>
+  <div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.5em; font-size: 14px;">
+    <a href="#modal-call" data-toggle="modal">popup-1</a>,
+    <a href="#modal-sent" data-toggle="modal">popup-2</a>,
+  </div>
 
   <div class="page__inner">
 
@@ -46,22 +50,30 @@
             <div class="s2-right-leaf-02" data-parallax="0.5"></div>
           </div>
           <div class="container">
-            <div class="main-heading">
-              <h2 class="main-heading__text">О продукте</h2>
+            <div class="main-heading overlay-container">
+              <div class="overlay-box wow animate__slideOutRight"></div>
+              <h2 class="main-heading__text">
+                О продукте
+              </h2>
               <div class="main-heading__decor"></div>
             </div>
             <div class="product-about">
               <div class="product-about__part">
                 <div class="product-about__img-wrap img-wrap-lime">
                   <img class="el-one wow animate__fadeInDown" data-wow-delay="0.4s" src="img/lime-one.png" alt="">
-                  <img class="product-about__img wow animate__fadeInLeft" data-wow-delay="0.4s" src="img/product-img-01.png" alt="">
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-duration ="1s"></div>
+                    <img class="product-about__img" src="img/product-img-01.png" alt="">
+                  </div>
                 </div>
                 <div class="product-about__caption">
-                  <div>
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-delay="0.2s"></div>
                     <h6 class="text-green">Без красителей</h6>
                     <p>В наших трубочках использузуются только натуральные продукты и никакой химии. Благодаря этому после того, как ваш напиток закончится вам не придется выкидывать её.</p>
                   </div>
-                  <div>
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-delay="0.4s"></div>
                     <h6 class="text-green">Без глютена</h6>
                     <p>В производстве наших трубочек используются только натуральные фрукты, выращенные с заботой и любовью. В изготовлении мы не используем химию, а пользуемся природными ресурсами.</p>
                   </div>
@@ -69,32 +81,42 @@
               </div>
               <div class="product-about__part">
                 <div class="product-about__caption">
-                  <div>
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-delay="0.2s"></div>
                     <h6 class="text-green">Без консервантов</h6>
                     <p>В <b>GreenGlow</b> заботятся о здоровье своих клиентов. Разработанная нами технология позволяет  не использовать консерванты, обходясь исключительно натуральными продуктами.</p>
                   </div>
-                  <div>
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-delay="0.4s"></div>
                     <h6 class="text-green">Без ГМО</h6>
                     <p>Фрукты, использующиеся в процессе производства наших трубочек не обрабатываются ГМО. Благодаря этому нам удается создавать биологически чистый и натуральный продукт</p>
                   </div>
                 </div>
                 <div class="product-about__img-wrap img-wrap-mint">
                   <img class="el-one wow animate__fadeInDown" data-wow-delay="0.4s" src="img/mint-one.png" alt="">
-                  <img class="product-about__img wow animate__fadeInRight" data-wow-delay="0.4s" src="img/product-img-02.png" alt="">
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-duration ="1s"></div>
+                    <img class="product-about__img" src="img/product-img-02.png" alt="">
+                  </div>
                 </div>
               </div>
               <div class="product-about__part">
                 <div class="product-about__img-wrap img-wrap-strawberry">
                   <img src="img/strawberry-one.png" alt="" class="el-one wow animate__fadeInDown" data-wow-delay="0.4s">
                   <img src="img/strawberry-two.png" alt="" class="el-two wow animate__fadeInUp" data-wow-delay="0.4s">
-                  <img class="product-about__img wow animate__fadeInLeft" data-wow-delay="0.4s" src="img/product-img-03.png" alt="">
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-duration ="1s"></div>
+                    <img class="product-about__img" src="img/product-img-03.png" alt="">
+                  </div>
                 </div>
                 <div class="product-about__caption">
-                  <div>
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-delay="0.2s"></div>
                     <h6 class="text-green">Не содержит красителей</h6>
                     <p>В производстве наших трубочек не используются красители. Цвет достигается благодаря натуральным фруктам и ягодам, таким как: яблоки, виноград, груша, апельсин и тд.</p>
                   </div>
-                  <div>
+                  <div class="overlay-container">
+                    <div class="overlay-box wow animate__slideOutRight" data-wow-delay="0.4s"></div>
                     <h6 class="text-green">Не содержит сахара</h6>
                     <p>В наших трубочках не содержится сахар. Сладость придается естественным путем, из-за фруктов и ягод. Это позволяет сделать наш продукт ещё более полезным для здоровья людей.</p>
                   </div>
@@ -112,7 +134,8 @@
             <div class="s3-right-leaf" data-parallax="0.3"></div>
           </div>
           <div class="container">
-            <div class="main-heading">
+            <div class="main-heading overlay-container">
+              <div class="overlay-box gray wow animate__slideOutRight"></div>
               <h2 class="main-heading__text">Заказать трубочки</h2>
               <div class="main-heading__decor"></div>
             </div>
@@ -280,7 +303,8 @@
             <img src="img/wave-white-04.svg" alt="">
           </div>
           <div class="container">
-            <div class="main-heading">
+            <div class="main-heading overlay-container">
+              <div class="overlay-box wow animate__slideOutRight"></div>
               <h2 class="main-heading__text">Видео о производстве</h2>
               <div class="main-heading__decor"></div>
             </div>
@@ -307,11 +331,10 @@
                   <p>Технологи GreenGlow разработали продукт, который  можно считать идеальным в мире коктейльных трубочек</p>
                 </div>
               </div>
-              <div class="production__video wow animate__fadeInUp">
-                <img src="img/video-img.jpg" alt="">
-                <!-- <div class="embed-responsive  embed-responsive--16-9">
-                  <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                </div> -->
+              <div class="video-content-bg wow animate__fadeIn" style="background-image: url(img/video-img.jpg);">
+                <a href="https://www.youtube.com/watch?v=9TGlc0Fufgk" class="video-play-button popup-youtube">
+                  <span></span>
+                </a>
               </div>
             </div>
           </div>
@@ -322,7 +345,8 @@
             <div class="s5-right-leaf" data-parallax="0.3"></div>
           </div>
           <div class="container">
-            <div class="main-heading">
+            <div class="main-heading overlay-container">
+              <div class="overlay-box gray wow animate__slideOutRight"></div>
               <h2 class="main-heading__text">Наша команда</h2>
               <div class="main-heading__decor"></div>
             </div>
@@ -361,7 +385,8 @@
         </section>
         <section class="l-section l-section--callback">
           <div class="container">
-            <div class="main-heading">
+            <div class="main-heading overlay-container">
+              <div class="overlay-box wow animate__slideOutRight"></div>
               <h2 class="main-heading__text">Закажи звонок</h2>
               <div class="main-heading__decor"></div>
             </div>
@@ -385,20 +410,23 @@
         </section>
         <section class="l-section l-section--news bg-gray">
           <div class="container">
-            <div class="main-heading">
+            <div class="main-heading overlay-container">
+              <div class="overlay-box gray wow animate__slideOutRight"></div>
               <h2 class="main-heading__text">Новости о продукте</h2>
               <div class="main-heading__decor"></div>
             </div>
             <div class="news">
               <div class="news__row">
-                <div class="news__img-col">
+                <div class="news__img-col overlay-container">
+                  <div class="overlay-box gray wow animate__slideOutRight" data-wow-duration = "2s"></div>
                   <div class="news__big-img" style="background-image: url(img/news-img-big.jpg);"></div>
                 </div>
                 <div class="news__list-col">
                   <div class="news__list">
-                    <div class="news__item wow animate__fadeInRight" data-wow-delay="0.2s">
+                    <div class="news__item">
                       <div class="news-card">
-                        <div class="news-card__img-wrap">
+                        <div class="news-card__img-wrap  overlay-container">
+                          <div class="overlay-box gray wow animate__slideOutRight" data-wow-duration = "1.5s"></div>
                           <img src="img/news-img-01.jpg" alt="" class="news-card__img">
                         </div>
                         <div class="news-card__body">
@@ -410,9 +438,10 @@
                         </div>
                       </div>
                     </div>
-                    <div class="news__item wow animate__fadeInRight" data-wow-delay="0.3s">
+                    <div class="news__item">
                       <div class="news-card">
-                        <div class="news-card__img-wrap">
+                        <div class="news-card__img-wrap overlay-container">
+                          <div class="overlay-box gray wow animate__slideOutRight" data-wow-duration = "1.5s"></div>
                           <img src="img/news-img-02.jpg" alt="" class="news-card__img">
                         </div>
                         <div class="news-card__body">
@@ -424,9 +453,10 @@
                         </div>
                       </div>
                     </div>
-                    <div class="news__item wow animate__fadeInRight" data-wow-delay="0.4s">
+                    <div class="news__item">
                       <div class="news-card">
-                        <div class="news-card__img-wrap">
+                        <div class="news-card__img-wrap overlay-container">
+                          <div class="overlay-box gray wow animate__slideOutRight" data-wow-duration = "1.5s"></div>
                           <img src="img/news-img-03.jpg" alt="" class="news-card__img">
                         </div>
                         <div class="news-card__body">
@@ -449,7 +479,8 @@
             <div class="s8-left-leaf" data-parallax="0.2"></div>
           </div>
           <div class="container">
-            <div class="main-heading">
+            <div class="main-heading overlay-container">
+              <div class="overlay-box wow animate__slideOutRight"></div>
               <h2 class="main-heading__text">Наши партнеры</h2>
               <div class="main-heading__decor"></div>
             </div>
@@ -490,6 +521,7 @@
   </div>
 
   <div class="zeynep-overlay"></div>
+  @@include('blocks/modal/modal.html')
   @@include('_include/page_bottom.html')
 </body>
 </html>

@@ -31,7 +31,7 @@ $transition-time:             0.3s !default;
   display: none;
 
   // настольный вид списка
-  @media (min-width: $menu-desktop-width) {
+  @media (min-width: $screen-lg) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -42,7 +42,11 @@ $transition-time:             0.3s !default;
     &--active {
 
       & > #{$block-name}__link {
-        color: #413737;
+        color: #81B03F;
+        &:hover,
+        &:focus {
+          color: #81B03F;
+        }
       }
     }
   }
@@ -81,7 +85,7 @@ $transition-time:             0.3s !default;
     &:focus {
       outline: none;
     }
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
       display: none;
     }
   }
