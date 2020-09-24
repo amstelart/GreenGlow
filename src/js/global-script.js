@@ -124,7 +124,14 @@ $(function() {
 
   $('.order-basket-toggler').on('click', function () {
     $(this).toggleClass('active');
-    $('.zeynep.top').data('zeynep').open();
+    $('.zeynep').each(function () {
+      const $zeynep = $(this);
+      if ($zeynep.hasClass('opened')) {
+      $zeynep.data('zeynep').close()
+      } else {
+        $zeynep.data('zeynep').open();
+      }
+    });
   });
 
 });

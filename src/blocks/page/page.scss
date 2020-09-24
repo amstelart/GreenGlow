@@ -62,6 +62,9 @@
   }
 
   &--order {
+    body {
+      padding-top: 0;
+    }
     #{$block-name}__content {
       margin-bottom: 0;
     }
@@ -1744,6 +1747,125 @@ img {
     background: #FAFAFA;
   }
 }
+
+.section-basket {
+  position: fixed;
+  width: 373px;
+  z-index: 10;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FFFFFF;
+  border: 1px solid #DCDCDC;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.02);
+  border-radius: 5px 0px 0px 6px;
+
+  @media (max-width:($screen-lg - 1)) {
+    display: none;
+  }
+
+  &:not(.opened) {
+    transform: translateX(100%);
+  }
+  &:not(.empty) {
+    .section-basket__footer {
+      > .btn {
+        display: none;
+      }
+    }
+    .section-basket__action {
+      display: block;
+    }
+  }
+  &.empty {
+    .section-basket__body {
+      &:before {
+        content: "Корзина пуста";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #DCDCDC;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__header {
+    padding: 20px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #DCDCDC;
+  }
+  &__title {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  &__close {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  &__body {
+    height: 500px;
+    overflow-x: hidden;
+    position: relative;
+
+    .basket__list {
+      border: none;
+      border-radius: 0;
+      position: relative;
+    } 
+  }
+  &__footer {
+    padding: 20px 18px;
+    border-top: 1px solid #DCDCDC;
+    box-shadow: 0px -3px 16px rgba(0, 0, 0, 0.08);
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__action {
+    display: none;
+
+    .action-price {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      &__title {
+        font-weight: 500;
+        font-size: 16px;
+      }
+      &__value {
+        font-weight: 600;
+        font-size: 20px;
+        white-space: nowrap;
+      }
+    }
+    .action-btns {
+      display: flex;
+      .btn {
+        width: 50%;
+        padding: 15px;
+        font-size: 14px;
+
+      }
+      .cancel {
+        background: transparent;
+        color: #FFAFAF;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 15px 15px;
+        margin-left: auto;
+      }
+    }
+  }
+} 
 
 
 
