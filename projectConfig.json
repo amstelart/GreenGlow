@@ -57,7 +57,9 @@
     "tooltip": [],
     "social": [],
     "field-num": [],
-    "zeynep": []
+    "zeynep": [],
+    "adv-carousel": [],
+    "product-about": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

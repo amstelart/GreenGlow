@@ -333,6 +333,7 @@ img {
   }
   &__btn {
     width: 100%;
+    margin-bottom: 8px;
     @media (min-width: $screen-md) {
       width: auto;
     }
@@ -353,6 +354,14 @@ img {
     padding: 88px 0;
   }
 
+  &--about {
+    @media (max-width: ($screen-md - 1)) {
+      background-image: url(../img/product-about__m-img.jpg);
+      background-position: top 0px center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
   &--order {
     position: relative;
     .wave {
@@ -389,6 +398,11 @@ img {
       z-index: 2;
     }
   }
+  &--adv {
+    @media (max-width: ($screen-md - 1)) {
+      display: none;
+    }
+  }
 }
 .main-heading {
   margin-bottom: 25px;
@@ -411,108 +425,6 @@ img {
     max-width: 70px;
     height: 10px;
     margin-top: 5px;
-  }
-}
-
-.product-about {
-  &__part {
-    @include row;
-    align-items: center;
-  }
-  &__img-wrap {
-    @include col();
-    @include col(md, 6);
-    position: relative;
-    @media (max-width: ($screen-md - 1)) {
-      order: 1;
-    }
-
-    &.img-wrap-lime {
-      .el-one {
-        position: absolute;
-        bottom: 85%;
-        right: -10%;
-        z-index: 3;
-
-        @media (max-width:($screen-lg - 1)) {
-          display: none;
-        }
-        @media (max-width:($screen-xl - 1)) {
-          width: 100px;
-        }
-      }
-    }
-    &.img-wrap-mint {
-      .el-one {
-        position: absolute;
-        bottom: 45%;
-        left: -30%;
-        z-index: 1;
-
-        @media (max-width:($screen-lg - 1)) {
-          display: none;
-        }
-        @media (max-width:($screen-xl - 1)) {
-          width: 230px;
-          bottom: 53%;
-          left: -18%;
-        }
-      }
-    }
-    &.img-wrap-strawberry {
-      .el-one {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: -19%;
-
-        @media (max-width:($screen-lg - 1)) {
-          display: none;
-        }
-        @media (max-width:($screen-xl - 1)) {
-          width: 120px;
-          right: -8%;
-          top: 5%;
-        }
-      }
-      .el-two {
-        position: absolute;
-        z-index: 3;
-        bottom: -24%;
-        right: -3%;
-
-        @media (max-width:($screen-lg - 1)) {
-          display: none;
-        }
-        @media (max-width:($screen-xl - 1)) {
-          width: 140px;
-          right: -8%;
-          bottom: -18%;
-        }
-      }
-    }
-  }
-  &__img {
-    position: relative;
-    z-index: 2;
-  }
-  &__caption {
-    @include col();
-    @include col(md, 6);
-    @media (max-width: ($screen-md - 1)) {
-      order: 2;
-    }
-    @media (min-width: $screen-xl) {
-      padding-right: 75px;
-      &:nth-child(2n) {
-        padding-right: 15px;
-        padding-left: 75px;
-      }
-    }
-
-    h6 {
-      margin: 0;
-    }
   }
 }
 

@@ -266,6 +266,17 @@ $( document ).ready(function() {
   wow.init();
 });
 
+$('.adv-carousel').slick({
+  // autoplay: true,
+  arrows: true,
+  dots: false,
+  infinite: true,
+  // centerMode: true,
+  // centerPadding: '340px',
+  slidesToShow: 1,
+  speed: 500
+});
+
 $('#intro-box-carousel').slick({
   autoplay: true,
   arrows: false,
