@@ -260,37 +260,60 @@ img {
 }
 
 .l-intro {
-  background: linear-gradient(259.17deg, #F2FFD6 1.18%, #D5FFD9 97.82%);
-  padding-top: 35px;
+  // background: linear-gradient(259.17deg, #F2FFD6 1.18%, #D5FFD9 97.82%);
+  // padding-top: 35px;
   position: relative;
 
-  @media (min-width: $screen-md) {
-    background: linear-gradient(259.17deg, #FBFFF1 1.18%, #EEFFF0 97.82%);
-  }
-  &__mobile-img {
+  .video {
+    position: relative;
+    z-index: 10;
     width: 100%;
-    @media (min-width: $screen-md) {
-      display: none;
-    }
+    height: calc(100vh - 89px);
+    min-height: 560px;
+    overflow: hidden;
+    background: url(../images/stockers.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  // @media (min-width: $screen-md) {
+  //   background: linear-gradient(259.17deg, #FBFFF1 1.18%, #EEFFF0 97.82%);
+  // }
+  // &__mobile-img {
+  //   width: 100%;
+  //   @media (min-width: $screen-md) {
+  //     display: none;
+  //   }
+  // }
+  &__content {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 10vw;
   }
   .container {
+    position: absolute;
+    left: 4vw;
+    right: 4vw;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
     // padding-top: 130px;
-    padding-bottom: 60px;
-    height: auto;
-    position: relative;
-    z-index: 5;
-    @media (min-width: $screen-md) {
-      background-image: url(../img/l-intro-img.png);
-      background-repeat: no-repeat;
-      background-position: center right;
-      background-size: contain;
-      height: 530px;
-      padding-top: 130px;
-      padding-bottom: 300px;
-    }
-    @media (min-width: $screen-lg) {
-      height: 700px;
-    }
+    // padding-bottom: 60px;
+    // height: auto;
+    // position: relative;
+    // z-index: 5;
+    // @media (min-width: $screen-md) {
+    //   background-image: url(../img/l-intro-img.png);
+    //   background-repeat: no-repeat;
+    //   background-position: center right;
+    //   background-size: contain;
+    //   height: 530px;
+    //   padding-top: 130px;
+    //   padding-bottom: 300px;
+    // }
+    // @media (min-width: $screen-lg) {
+    //   height: 700px;
+    // }
   } 
 }
 

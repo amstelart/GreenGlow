@@ -203,6 +203,13 @@ gulp.task('copy:fonts', function () {
     .pipe(gulp.dest(dirs.buildPath + '/fonts'));
 });
 
+// Копирование видео
+gulp.task('copy:video', function () {
+  console.log('---------- Копирование видео');
+  return gulp.src(dirs.srcPath + '/video/*.{mp4,mp3,mp2,webp,webm}')
+    .pipe(gulp.dest(dirs.buildPath + '/video'));
+});
+
 // Генератор фавиконок
 gulp.task('favicons', function(done) {
   realFavicon.generateFavicon({
@@ -447,6 +454,7 @@ gulp.task('build', function (callback) {
     ['clean'],
     ['sprite:svg', 'sprite:png', 'favicons'],
     ['style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'],
+    ['copy:video'],
     'html',
     callback
   );
