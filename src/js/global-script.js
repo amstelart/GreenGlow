@@ -522,7 +522,7 @@ $(function() {
       root.videoResize = function(videoContainer, video) {
           var videoContainerWidth = videoContainer.width();
           var videoContainerHeight = videoContainer.height();
-          var k = 1.50037509;
+          var k = 2.40037509;
 
           if (videoContainerWidth / k >= videoContainerHeight) {
               video
